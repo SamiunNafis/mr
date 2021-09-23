@@ -1,0 +1,132 @@
+/*
+*
+* Copyright (c) 2021 Melvin Jones Repol (mrepol742.github.io). All rights reserved.
+*
+* License under the GNU General Public License, Version 3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     https://www.gnu.org/licenses/gpl-3.0.en.html
+*
+* Unless required by the applicable law or agreed in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+::selection {
+    background-color: #4285f4;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background-color: #4285f4;
+    color: #ffffff;
+}
+
+a {
+    color: #4285f4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f1f1f1;
+}
+
+* {
+    font-family: 'Maven Pro', sans-serif;
+    outline: none;
+}
+
+h1 {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .40);
+}
+
+.webvium {
+	margin:1.5rem;
+}
+
+#con {
+    text-align: center;
+    margin-top: 10%;
+    position:relative;
+}
+
+@media (max-width:1080px) {
+    #con {
+        margin-top: 30%;
+    }
+}
+
+#search {
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 0px;
+    background: linear-gradient(90deg, #5f2c82, #49a09d);
+    color: #ffffff;
+    width: 80%;
+    height: 45px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 15px;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .50);
+}
+
+#search::placeholder {
+    color: #f1f1f1;
+}
+
+.obj {
+    opacity: 0;
+    transform: translateY(15%);
+    transition: all 1.5s ease;
+}
+
+.obj.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#sug {
+	display:none;
+	flex-direction:column;
+	width:calc(80% - 0rem);
+	background:white;
+	margin:1rem 0;
+	border-radius:1rem;
+	position:absolute;
+	left:50%;
+	transform:translate(-50%, -10%);
+	padding:0 5px;
+	max-height:calc(100vh - 50vh);
+	overflow-y:scroll;
+}
+
+#sug .sug-item {
+	display:flex;
+	justify-content:flex-start;
+	align-items:center;
+	padding:0.5rem;
+}
+
+#sug .sug-item span {
+	margin:0 0.5rem;
+	font-size:1rem;
+}
+
+#sug .sug-item .text {
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
